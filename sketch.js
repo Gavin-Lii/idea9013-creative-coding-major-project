@@ -54,10 +54,9 @@ function createNewTree() {
 }
 
 function keyPressed() {
-  if (key === ' ') {
-    createNewTree();
-  }
+  inputMechanic.handleKeyPressed(key);
 }
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
