@@ -124,7 +124,7 @@ class Branch {
     let xB = this.x + sin(this.angle) * this.length;
     let yB = this.y + cos(this.angle) * this.length;
 
-    if (this.length > 10) {
+    if (this.length > 20) {
       if (this.length + random(this.length * 10) > 30) {
         this.branchA = new Branch(
           this,
@@ -241,7 +241,5 @@ class Branch {
 }
 
 function keyPressed() {
-  if (key === ' ') {
-    createNewTree();
-  }
+  inputMechanic.handleKeyPressed(key);
 }
